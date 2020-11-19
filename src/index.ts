@@ -1,6 +1,5 @@
 import "./set-public-path";
 import { backendDependencies } from "./openmrs-backend-dependencies";
-import * as LocationPickerParcel from "./location-picker-parcel.component";
 
 const importTranslation = require.context(
   "../translations",
@@ -11,14 +10,9 @@ const importTranslation = require.context(
 
 function setupOpenMRS() {
   return {
-    lifecycle: () => import("./openmrs-esm-login"),
+    lifecycle: () => import("./openmrs-esm-foo-ext"),
     activate: "login",
   };
 }
 
-export {
-  backendDependencies,
-  importTranslation,
-  setupOpenMRS,
-  LocationPickerParcel,
-};
+export { backendDependencies, importTranslation, setupOpenMRS };
