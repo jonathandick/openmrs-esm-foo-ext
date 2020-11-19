@@ -3,9 +3,10 @@ import { openmrsRootDecorator } from "@openmrs/esm-context";
 
 const Root: React.FC = () => (
   <div>
-    <h1>Hello world</h1>
+    <button>Hello world</button>
   </div>
 );
+
 
 export default openmrsRootDecorator({
   featureName: "foo",

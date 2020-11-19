@@ -10,10 +10,10 @@ module.exports = {
     path.resolve(__dirname, "src/index.ts"),
   ],
   output: {
-    filename: "openmrs-esm-foo-ext.js",
+    filename: "openmrs-esm-foo-ext-app.js",
     libraryTarget: "system",
     path: path.resolve(__dirname, "dist"),
-    jsonpFunction: "webpackJsonp_openmrs_esm_foo_ext",
+    jsonpFunction: "webpackJsonp_openmrs_esm_foo_ext_app",
   },
   module: {
     rules: [
