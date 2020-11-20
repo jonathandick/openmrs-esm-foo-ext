@@ -11,17 +11,17 @@ const importTranslation = require.context(
 
 function setupOpenMRS() {
   return {
-//    lifecycle: () => import("./openmrs-esm-foo-ext"),
-//    activate: "login",
+    //    lifecycle: () => import("./openmrs-esm-foo-ext"),
+    //    activate: "login",
     extensions: [
-      { 
-        name : "foo-ext",
-        load : () => import("./openmrs-esm-foo-ext")
-      } 
-    ]
+      {
+        name: "foo-ext",
+        load: () => import("./openmrs-esm-foo-ext"),
+      },
+    ],
   };
 }
 
-attach("home-page-buttons","foo-ext");
+//attach("home-page-buttons","foo-ext");
 
 export { backendDependencies, importTranslation, setupOpenMRS };

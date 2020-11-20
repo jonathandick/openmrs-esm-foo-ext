@@ -7,7 +7,6 @@ const Root: React.FC = () => (
   </div>
 );
 
-
 export default openmrsRootDecorator({
   featureName: "foo",
   moduleName: "@openmrs/esm-foo-ext",
