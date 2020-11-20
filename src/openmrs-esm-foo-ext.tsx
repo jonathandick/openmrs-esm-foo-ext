@@ -9,22 +9,17 @@ import { openmrsRootDecorator } from "@openmrs/esm-context";
 
 defineConfigSchema("@openmrs/esm-foo-ext-app", esmFooExtSchema);
 
-//import Root from "./root.component";
-
-const { bootstrap, mount, unmount } = singleSpaReact({
-  React,
-  ReactDOM,
-  rootComponent: openmrsRootDecorator({
-    featureName: "foo",
-    moduleName: "@openmrs/esm-foo-ext-app",
-  })(Root),
-});
-
-export default { bootstrap, mount, unmount };
-
+// create the root component
 export function Root() {
   const className = `omrs-link omrs-filled-neutral`;
-  const config = useExtensionConfig();
+
+  /*
+    //This currently has a bug but once fixed, will allow us to support configuration of an extension
+    const config = useExtensionConfig();
+  */
+
+  //Temporary placeholder for the config given the useExtensionConfig is a WIP
+  const config = { messages: { helloWorldMessage: "hello world" } };
   return (
     <a
       className={className}
@@ -35,3 +30,20 @@ export function Root() {
     </a>
   );
 }
+
+// Decorate the root, this adds some additional support for translation and configuration
+const decoratedRoot = openmrsRootDecorator({
+  featureName: "foo-ext",
+  moduleName: "@openmrs/esm-foo-ext-app",
+})(Root);
+
+// Create a single spa parcel
+const { bootstrap, mount, unmount } = singleSpaReact({
+  React,
+  ReactDOM,
+  rootComponent: decoratedRoot,
+});
+
+// The convention is to export these lifecycle methods for the extension as the default
+// In index.ts, the extensions property expects this to be the default output from an extension
+export default { bootstrap, mount, unmount };
