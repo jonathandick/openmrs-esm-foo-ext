@@ -1,11 +1,11 @@
 {
-  "name": "@openmrs/esm-login-app",
-  "version": "3.0.1",
-  "description": "The login microfrontend for the OpenMRS SPA",
-  "main": "dist/openmrs-esm-login.js",
+  "name": "@openmrs/esm-foo-ext-app",
+  "version": "1.0.0",
+  "description": "Creating a demo extesnion",
+  "main": "dist/openmrs-esm-foo-ext-app.js",
   "types": "src/index.ts",
   "license": "MPL-2.0",
-  "homepage": "https://github.com/openmrs/openmrs-esm-login#readme",
+  "homepage": "https://github.com/jonathandick/openmrs-esm-foo-ext#readme",
   "scripts": {
     "start": "openmrs debug --run-project",
     "debug": "webpack-dev-server",
@@ -32,10 +32,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/openmrs/openmrs-esm-login.git"
+    "url": "git+https://github.com/jonathandick/openmrs-esm-foo-ext.git"
   },
   "bugs": {
-    "url": "https://github.com/openmrs/openmrs-esm-login/issues"
+    "url": "https://github.com/jonathandick/openmrs-esm-foo-ext/issues"
   },
   "dependencies": {
     "kremling": "^2.0.3",
