@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import ReactDOM from "react-dom";
 import singleSpaReact from "single-spa-react";
 import { navigateToUrl } from "single-spa";
@@ -19,6 +19,8 @@ export function Root() {
   */
 
   //Temporary placeholder for the config given the useExtensionConfig is a WIP
+
+
   const config = { messages: { helloWorldMessage: "hello world" } };
   return (
     <a
@@ -27,9 +29,13 @@ export function Root() {
       onClick={(event) => navigateToUrl(event, "")}
     >
       {config.messages.helloWorldMessage}
+
     </a>
   );
 }
+/*
+
+*/
 
 // Decorate the root, this adds some additional support for translation and configuration
 const decoratedRoot = openmrsRootDecorator({

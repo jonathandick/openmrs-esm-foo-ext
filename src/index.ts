@@ -20,6 +20,15 @@ function setupOpenMRS() {
         name: "foo-ext",
         load: () => import("./openmrs-esm-foo-ext"),
       },
+      {
+        name: "foo2-ext",
+        load: () => import("./openmrs-esm-foo-ext")
+      },
+      { 
+        name: "bar-ext",
+        load: () => import("./openmrs-esm-bar-ext")
+      },
+      
     ],
   };
 }
