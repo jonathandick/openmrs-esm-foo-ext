@@ -25,4 +25,8 @@ Build a navigation link to go to the home page and attach it to the nav-meu slot
 
 4. Run ```npm update``` to get updates
 
-5. Run ```npm run start``` to start the development environment
+5. Run ```npm run start -- --importmap="https://spa-modules.nyc3.digitaloceanspaces.com/import-map.json"``` to start the development environment. This will do two things: 1) start a local app shell; 2) serve your repo locally and add it to the import-map of your local app shell. Note that we are explicitly telling the app-shell to use the latest import-map on digital ocean. We are ONLY doing this now because we have made changes to a few modules which have not been released yet on npm. 
+
+As an alternative to local development, one could also use https://openmrs-spa.org directly. Instead of the above npm command, you would run: ```npm run debug -- --https```. This would serve the module locally (likley at port 8080 but check your terminal output). You could then add this module to your import-map via the dev tools widget. To enable this widget, enter your browser console and type ```localstorage.setItem("openmrs:devtools",true)```. You should now see a small gray box in the bottom right of the browser window. Click on it. Click on "Add new module". For the module name, type "@openmrs/esm-foo-ext-app", for the Override URL type in 8080 (or the port assigned as indicated in your terminal). Refresh your browser and you now have this module loaded in your app. 
+
+
