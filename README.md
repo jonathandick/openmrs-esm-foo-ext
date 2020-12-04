@@ -15,6 +15,7 @@ Build a navigation link to go to the home page and attach it to the nav-meu slot
 
 ## Step-by-step
 1. Fork/clone this repo
+```git clone https://github.com/jonathandick/openmrs-esm-foo-ext```
 
 2. cd into the cloned directory
 
