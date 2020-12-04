@@ -1,5 +1,13 @@
 # MF Development Session
 
+## Objectives
+1. Learn how to set up your machine for local development
+2. Understand the extension framework and build your first extension
+3. Learn about configuration and the implementer tools for MFs
+
+## Target project
+Build a navigation link to go to the home page and attach it to the nav-meu slot
+
 ## Required software for local development:
 - NodeJS and NPM : https://nodejs.org/en/
 - n (node version manager) : ```npm install -g n``` see https://www.npmjs.com/package/n
@@ -17,3 +25,4 @@
 
 4. Run ```npm update``` to get updates
 
+5. Run ```npm run start``` to start the development environment
